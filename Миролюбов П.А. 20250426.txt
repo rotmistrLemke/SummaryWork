@@ -1,0 +1,42 @@
+    1  # Создание файлов с животными
+    2  cat > Pets.txt <<EOF
+    3  dogs
+    4  cats
+    5  hamsters
+    6  EOF
+    7  cat > PackAnimals.txt <<EOF
+    8  horses
+    9  camels
+   10  donkeys
+   11  EOF
+   12  
+   13  # Объединение файлов
+   14  cat Pets.txt PackAnimals.txt > HumanFriends.txt
+   15  
+   16  # Просмотр содержимого
+   17  cat HumanFriends.txt
+   18  
+   19  # Переименование файла
+   20  mv HumanFriends.txt HumanFriends.txt
+   21  
+   22  # Проверка списка файлов
+   23  ls
+   24  
+   25  # Работа с директориями
+   26  mkdir Animals
+   27  mv HumanFriends.txt Animals/
+   28  ls Animals/
+   29  
+   30  # Установка MySQL
+   31  sudo apt update
+   32  sudo apt install mysql-server -y
+   33  sudo systemctl start mysql
+   34  sudo systemctl status mysql
+   35  
+   36  # Работа с deb-пакетами (на примере wget)
+   37  wget http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.21.3-1ubuntu1_amd64.deb
+   38  sudo dpkg -i wget_1.21.3-1ubuntu1_amd64.deb
+   39  sudo dpkg -r wget
+   40  
+   41  # Сохранение истории команд
+   42  history > terminal_history.txt
